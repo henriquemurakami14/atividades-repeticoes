@@ -2,7 +2,7 @@ programa
 {
 	
 	funcao inicio()
-	{	
+	{	
 		//escreva("-=-= ATIVIDADE 1 =-=-\n")
 		//atividade1()
 		//enter()
@@ -35,7 +35,7 @@ programa
 		//atividade9()
 		//enter()
 		
-	}	
+	}	
 
 	
 	funcao atividade1(){
@@ -109,13 +109,53 @@ programa
 		escreva("Há ", par, " número(s) par(es).\nHá ", impar, " número(s) impar(es).")
 	}
 	funcao atividade6a(){
+		inteiro a = 0, b = 1, c
+		c = a + b
+		
+		escreva(a, " , ", b, " , ", c, " , ")
+		
+		enquanto (c < 500){
+		a = b
+		b = c
+		c = a + b
+		
+		escreva(c)
+		se(c < 500){
+			escreva(" , ")
+		}
+		
+		
+		}
+		
+
 		
 	}
 	funcao atividade6b(){
+		inteiro a = 0, b = 1, c, n
+		escreva("Digite um número limite: ")
+		leia(n)
+		c = a + b
 		
+		escreva(a, " , ", b, " , ", c)
+		
+		enquanto (c < n){
+		a = b
+		b = c
+		c = a + b
+
+		se(c > n){
+			pare
+		}senao{
+			escreva(" , ")
+		}
+		escreva(c)
+		
+		
+		
+		}
 	}
 	funcao atividade7(){
-		
+
 	}
 	funcao atividade8(){
 		
@@ -139,14 +179,3 @@ programa
 	}
 	
 }
-/* $$$ Portugol Studio $$$ 
- * 
- * Esta seção do arquivo guarda informações do Portugol Studio.
- * Você pode apagá-la se estiver utilizando outro editor.
- * 
- * @POSICAO-CURSOR = 816; 
- * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = ;
- * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
- * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
- */
