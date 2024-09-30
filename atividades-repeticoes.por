@@ -3,38 +3,40 @@ programa
 	
 	funcao inicio()
 	{	
-		//escreva("-=-= ATIVIDADE 1 =-=-\n")
-		//atividade1()
-		//enter()
-		//escreva("-=-= ATIVIDADE 2 =-=-\n")
-		//atividade2()
-		//enter()
-		//escreva("-=-= ATIVIDADE 3 =-=-\n")
-		//atividade3()
-		//enter()
-		//escreva("-=-= ATIVIDADE 4 A =-=-\nParte A:\n\n")
-		//atividade4a()
-		//escreva("-=-= ATIVIDADE 4 =-=-\nParte B:\n\n")
-		//atividade4b()
-		//escreva("-=-= ATIVIDADE 5 =-=-\n")
-		//atividade5()
-		//enter()
-		//escreva("-=-= ATIVIDADE 6 =-=-\nParte A:\n\n")
-		//atividade6a()
-		//enter()
-		//escreva("-=-= ATIVIDADE 6 =-=-\nParte B:\n\n")
-		//atividade6b()
-		//enter()
-		//escreva("-=-= ATIVIDADE 7 =-=-\n")
-		//atividade7()
-		//enter()
-		//escreva("-=-= ATIVIDADE 8 =-=-\n")
-		//atividade8()
-		//enter()
-		//escreva("-=-= ATIVIDADE 9 =-=-\n")
-		//atividade9()
-		//enter()
-		
+		escreva("-=-= ATIVIDADE 1 =-=-\n")
+		atividade1()
+		enter()
+		escreva("-=-= ATIVIDADE 2 =-=-\n")
+		atividade2()
+		enter()
+		escreva("-=-= ATIVIDADE 3 =-=-\n")
+		atividade3()
+		enter()
+		escreva("-=-= ATIVIDADE 4 A =-=-\nParte A:\n\n")
+		atividade4a()
+		enter()
+		escreva("-=-= ATIVIDADE 4 =-=-\nParte B:\n\n")
+		atividade4b()
+		enter()
+		escreva("-=-= ATIVIDADE 5 =-=-\n")
+		atividade5()
+		enter()
+		escreva("-=-= ATIVIDADE 6 =-=-\nParte A:\n\n")
+		atividade6a()
+		enter()
+		escreva("-=-= ATIVIDADE 6 =-=-\nParte B:\n\n")
+		atividade6b()
+		enter()
+		escreva("-=-= ATIVIDADE 7 =-=-\n")
+		atividade7()
+		enter()
+		escreva("-=-= ATIVIDADE 8 =-=-\n")
+		atividade8()
+		enter()
+		escreva("-=-= ATIVIDADE 9 =-=-\n")
+		atividade9()
+		enter()
+		escreva("\nFIMMMMM! ")
 	}	
 
 	
@@ -71,29 +73,31 @@ programa
 		escreva("O maior números entre os digitados é ", maior)
 	}
 	funcao atividade4a(){
-		inteiro base, expoente
+		inteiro base, expoente, resultado = 1
 		escreva("Digite a base: ")
 		leia(base)
 		escreva("Digite o expoente: ")
 		leia(expoente)
 
-		para(inteiro i = 1; i < expoente; i++){
-			base = base * expoente
+		para(inteiro i = resultado; i <= expoente; i++){
+			resultado = resultado * base
 		}
-		escreva(base)
+		
+		escreva(resultado)
 	}
 
 	funcao atividade4b(){
-		inteiro base, expoente
+		inteiro base, expoente, resultado = 1
 		escreva("Digite a base: ")
 		leia(base)
 		escreva("Digite o expoente: ")
 		leia(expoente)
 
-		para(inteiro i = 1; i < expoente; i++){
-			base = base * expoente
+		para(inteiro i = resultado; i <= expoente; i++){
+			resultado = resultado * base
 		}
-		escreva(base)
+		
+		escreva(resultado)
 	}
 	funcao atividade5(){
 		inteiro n, par = 0, impar = 0
@@ -155,15 +159,91 @@ programa
 		}
 	}
 	funcao atividade7(){
+	 	inteiro numero
 
-	}
+	 	escreva("Digite um valor: ")
+	 	leia(numero)
+	 	
+	 	inteiro resultado = numero
+
+		escreva(numero, "! = ", numero)
+		para(inteiro i = numero-1; i != 0; i--){
+			escreva(" * ", i)
+			resultado = resultado * i
+		}
+
+		escreva(" = ", resultado)
+	
+}
+	
 	funcao atividade8(){
+		inteiro n, maior, menor, soma
 		
-	}
-	funcao atividade9(){
+			escreva("Digite uma sequencia de números (digite 0 para parar): ")
+			leia(n)
+			
+			maior = n
+			soma = n
+			menor = n
 		
+		enquanto(n != 0){
+			escreva("Digite vários números (digite 0 para parar): ")
+			leia(n)
+			soma += n
+			se(maior < n){
+
+				maior = n
+			}
+			senao se(menor > n e n != 0){
+				menor = n
+			}
+		}
+
+		escreva("Maior número digitado: ", maior, "\n", "Menor número digitado: ", menor, "\n", "Soma dos números digitados: ", soma)
 	}
 
+	funcao atividade9(){
+		inteiro n, maior, soma, menor
+
+
+			escreva("Digite vários números entre 1 a 1000 (Digite 0 para parar): ")
+			leia(n)
+			
+			enquanto(n < 0 ou n > 1000){
+				escreva("Valor inválido. Os números selecionados devem ser de 1 a 1000. Digite novamente: ")
+				leia(n)
+			}
+			
+			maior = n
+			soma = n
+			menor = n
+		
+
+		enquanto(n != 0){
+
+			escreva("Digite vários números entre 0 e 1000 (digite 0 para parar): ")
+			leia(n)
+
+			enquanto(n < 0 ou n > 1000){
+				escreva("Número inválido. Tente Novamente: ")
+				leia(n)
+			}
+			soma += n
+
+			se(maior < n){
+
+				maior = n
+			}
+
+			senao se(menor > n e n != 0){
+
+				menor = n
+			}
+		}
+
+		escreva("\nMaior número digitado: ", maior, "\n", "Menor número digitado: ", menor, "\n", "Soma dos números digitados: ", soma)
+		
+	}
 	funcao enter(){
 		cadeia enter
 		
@@ -179,3 +259,15 @@ programa
 	}
 	
 }
+
+/* $$$ Portugol Studio $$$ 
+ * 
+ * Esta seção do arquivo guarda informações do Portugol Studio.
+ * Você pode apagá-la se estiver utilizando outro editor.
+ * 
+ * @POSICAO-CURSOR = 783; 
+ * @PONTOS-DE-PARADA = ;
+ * @SIMBOLOS-INSPECIONADOS = ;
+ * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
+ * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
+ */
